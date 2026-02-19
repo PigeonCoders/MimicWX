@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Runtime data
+wx_qq_map.json
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Env
+.env
+.venv/
+venv/
+
+# Other projects in parent dir
+KouriChat/
+Yunzai/
+Wechat/
+.gemini/
+.agent/
