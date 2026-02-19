@@ -40,6 +40,8 @@ class Config(BaseModel):
             return cls()
         with open(p, "r", encoding="utf-8") as f:
             data = yaml.safe_load(f) or {}
+        # YAML 中注释掉的键解析为 None，去掉让 Pydantic 用默认值
+        data = {k: v for k, v in data.items() if v is not None}
         logger.info(f"已加载配置: {p}")
         return cls(**data)
 
